@@ -1,0 +1,18 @@
+抽象工厂模式：创建型
+有一个超级工厂
+abstract class AbstractFactory{
+    abstract A_Factory（）；
+    abstract B_Factory（）；
+}，
+工厂创建类---->创建分工厂
+FactoryProducer extends AbstracFactory{
+    choice：
+    A： return new A_Factory；
+    B:  return new B_Factory；
+}
+分工厂
+A_Factory{
+    Class：
+    A_a：    return new A_a()；
+    A_b：    return new A_b()；
+}
