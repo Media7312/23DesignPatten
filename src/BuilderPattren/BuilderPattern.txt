@@ -1,0 +1,43 @@
+建造者模式：一个复杂对象，由多个简单对象组成
+例：套餐有多个单品组成 Meal套餐由饮料+汉堡组成
+定义一个接口 Item，这样就可以
+Item item = new Drink()；
+Item item = new Burger()；
+Drink,Burger implements Item.
+Meal{
+private List<Iterm> items = new ArrayList<>();
+
+/**
+ * 往套餐里面加单品
+ */
+ public void addItem（Item item）{
+    items.add(item);
+ }
+public void showItems(){
+    for(Item item:items){
+        sout:item.getName();
+        ......
+    }
+}
+}
+
+MealBuilder{
+    public Meal get(Dringk drink,Burger burger){
+    /**
+     * 完成单品添加到套餐中
+     */
+        Meal meal = new Meal();
+        Meal.add(new Class(1));
+        Meal.add(new Class(2));
+
+        return meal；//这样就得到了一个套餐
+    }
+}
+Main（）{
+    MealBuilder ；
+    /**
+     * 调用方法，参数是具体类。
+     */
+    meal = mealBuilder.get(new Drink();new Burger());
+
+}
